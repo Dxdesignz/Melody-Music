@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melodyhub</title>
+    <!---------- favicon link -------->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png" />
+    <!---------- favicon link -------->
+    <!---------- link css ------------>
+    <link rel="stylesheet" href="style.css" />
+    <!---------- Font Icon ----------->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css" />
+    <!---------- Font Icon ----------->
+    <!---------- swiper js ----------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!---------- swiper js ----------->
+    <!-----------jquery link --------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-----------jquery link --------->
+
+    <!-----------Aos    link --------->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-----------Aos    link --------->
+
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+</head>
+
+<body>
+    <!-----------Top Area ------------>
+    <a href="#"><i class="fi fi-rr-caret-up" id="upper"></i></a>
+    <!-----------Top Area ------------>
+        <!-----------Animation Area ------>
+        <div class="loading">
+            <img src="img/loader.gif" alt="">
+        </div>
+        <!-----------Animation Area ------>
+    <!-----------Header link --------->
+    <section class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="" />
+            </div>
+            <div class="navbar" id="navbar">
+                <div class="link">
+                    <a href="#header">home</a>
+                    <a href="#explore">explore</a>
+                    <a href="#Music-list">songs</a>
+                    <a href="#art">artisits</a>
+                    <a href="#album">albums</a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="icon">
+                    <i class="fi fi-br-search" id="searchbtn"></i>
+                    <i class="fi fi-ss-heart" id="message"><span id="cart-quantity">0</span></i>
+                    <i class="fi fi-br-bars-staggered" id="menu"></i>
+                    <i class="fi fi-sr-user" id="profile"></i>
+                </div>
+                <div class="login" id="login">
+                    <div class="data">
+                        <div class="inner">
+                            <a href="#" id="name">Steffanie P</a>
+                            <img src="img/l1.jpg" alt="" id="img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-----------Header link --------->
+
+    <!-----------Search link --------->
+    <section class="search" id="search">
+        <div class="container">
+            <div class="searchbar">
+                <input type="search" id="search" name="search" placeholder="search our music" />
+                <i class="fi fi-br-search"></i>
+            </div>
+        </div>
+    </section>
+    <!-----------Search link --------->
+
+    <!-----------Hero Area link ------>
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="text" data-aos="fade-right" data-aos-duration="1000">
+                <h1 data-aos="fade-right">
+                    <span>Discover</span> the<br />
+                    Sound <span>track</span><br />
+                    <span>of</span> Your Life
+                </h1>
+                <p>
+                    Welcome to [<strong>melodyhub</strong>] your ultimate destination<br />for
+                    all things music universal language transcends.
+                </p>
+                <div class="button">
+                    <button>download</button>
+                    <button id="learn">learn more</button>
+                </div>
+            </div>
+            <div class="image-container" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="img/hero.png" alt="" id="bigimage" />
+                <div class="small-image" onclick="changeImage(this)" id="small-1">
+                    <img src="img/smallimage.png" alt="Small Image 1" />
+                </div>
+                <div class="small-image" onclick="changeImage(this)" id="small-2">
+                    <img src="img/smallimage2.png" alt="Small Image 2" />
+                </div>
+                <div class="small-image" onclick="changeImage(this)" id="small-3">
+                    <img src="img/small-3.png" alt="Small Image 2" />
+                </div>
+                <!-- Add more small images as needed -->
+                <div class="large-image-container">
+                    <div class="large-image">
+                        <img id="largeImage" src="img/bigimage.png" alt="Large Image" />
+                    </div>
+                </div>
+                <img src="img/play-btnimage.png" alt="imagebtnplay" id="playbtnimage" />
+            </div>
+        </div>
+    </section>
+
+    <!-----------Hero Area link ------>
+    <!-----------Explore link -------->
+    <section class="explore" id="explore">
+        <div class="heading">
+            <h1>melodyhub explore</h1>
+        </div>
+        <div class="container">
+            <div class="box" data-aos="fade-right" data-aos-duration="1000">
+                <div class="data">
+                    <div class="disk">
+                        <img src="img/m1.png" alt="" class="song-image" />
+                    </div>
+                    <h1 class="artist-name">sidhu moose wala</h1>
+                    <p class="music-name">music collection</p>
+                    <div id="waveform"></div>
+                    <div class="playbtn">
+                        <i class="fi fi-rr-angle-small-left" id="left"></i>
+                        <div class="playbtnred">
+                            <img src="img/playbtn.png" alt="" id="play" />
+                        </div>
+                        <i class="fi fi-rr-angle-small-right" id="right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="fade-right" data-aos-duration="1000">
+                <div class="data">
+                    <div class="disk">
+                        <img src="img/m2.png" alt="" class="song-image" />
+                    </div>
+                    <h1 class="artist-name">Alan walker</h1>
+                    <p class="music-name">music collection</p>
+                    <div id="waveform2"></div>
+                    <div class="playbtn">
+                        <i class="fi fi-rr-angle-small-left" id="left"></i>
+                        <div class="playbtnred">
+                            <img src="img/playbtn.png" alt="" id="play2" />
+                        </div>
+                        <i class="fi fi-rr-angle-small-right" id="right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="fade-right" data-aos-duration="1000">
+                <div class="data">
+                    <div class="disk">
+                        <img src="img/m3.png" alt="" class="song-image" />
+                    </div>
+                    <h1 class="artist-name">karan aujla</h1>
+                    <p class="music-name">music collection</p>
+                    <div id="waveform3"></div>
+                    <div class="playbtn">
+                        <i class="fi fi-rr-angle-small-left" id="left"></i>
+                        <div class="playbtnred">
+                            <img src="img/playbtn.png" alt="" id="play3" />
+                        </div>
+                        <i class="fi fi-rr-angle-small-right" id="right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-----------Explore link -------->
+
+    <!-----------Music List link -------->
+    <section class="Music-list" id="Music-list">
+        <div class="heading">
+            <h1>melodyhub songs</h1>
+        </div>
+        <div class="container">
+            <div class="music" data-aos="flip-left">
+                <div class="image-data">
+                    <img src="img/s1.png" alt="Song Image">
+                    <div class="text-data">
+                        <h2>alan walker headlight</h2>
+                        <p>music</p>
+                    </div>
+                </div>
+                <button class="addToCartBtn"><i class="fi fi-br-plus"></i></button>
+            </div>
+
+            <div class="music" data-aos="flip-left">
+                <div class="image-data">
+                    <img src="img/s2.png" alt="Song Image">
+                    <div class="text-data">
+                        <h2>sidhu moose wala </h2>
+                        <p>music</p>
+                    </div>
+                </div>
+                <button class="addToCartBtn"><i class="fi fi-br-plus"></i></button>
+            </div>
+
+            <div class="music" data-aos="flip-left">
+                <div class="image-data">
+                    <img src="img/s3.png" alt="Song Image">
+                    <div class="text-data">
+                        <h2>karan aujla kya baats</h2>
+                        <p>music</p>
+                    </div>
+                </div>
+                <button class="addToCartBtn"><i class="fi fi-br-plus"></i></button>
+            </div>
+
+            <div class="music" data-aos="flip-left">
+                <div class="image-data">
+                    <img src="img/s4.png" alt="Song Image">
+                    <div class="text-data">
+                        <h2>Marke : Jass Manak</h2>
+                        <p>music</p>
+                    </div>
+                </div>
+                <button class="addToCartBtn"><i class="fi fi-br-plus"></i></button>
+            </div>
+
+
+            <div class="music" data-aos="flip-left">
+                <div class="image-data">
+                    <img src="img/s5.png" alt="Song Image">
+                    <div class="text-data">
+                        <h2>Ava Max - Into Your Arms</h2>
+                        <p>music</p>
+                    </div>
+                </div>
+                <button class="addToCartBtn"><i class="fi fi-br-plus"></i></button>
+            </div>
+
+            <div class="music" data-aos="flip-left">
+                <div class="image-data">
+                    <img src="img/s3.png" alt="Song Image">
+                    <div class="text-data">
+                        <h2>karan aujla kya baats</h2>
+                        <p>music</p>
+                    </div>
+                </div>
+                <button class="addToCartBtn"><i class="fi fi-br-plus"></i></button>
+            </div>
+        </div>
+
+        <!-----------Add to cart ---------->
+        <div id="cart" class="cart">
+            <h2>Music Cart<i class="fi fi-sr-circle-xmark" id="close"></i></h2>
+            <ul id="cartItems" class="cartItemsList">
+                <!-- Cart items will be added here dynamically -->
+            </ul>
+            <button id="clearCartBtn">Clear Cart<i class="fi fi-br-recycle"></i></button>
+        </div>
+        <!-----------Add to cart---------->
+    </section>
+
+    <!-----------Music List link -------->
+
+    <!-----------Albums link -------->
+    <section class="album" id="album">
+        <div class="heading">
+            <h1>melodyhub albhums</h1>
+        </div>
+        <div class="container">
+            <div class="image-album"  data-aos="flip-left" data-aos-duration="1000">
+                <img src="img/g1.jpg" alt="g" id="albumimage">
+            </div>
+            <div class="image-album"  data-aos="flip-left" data-aos-duration="1000">
+                <img src="img/g2.jpg" alt="g" id="albumimage">
+            </div>
+            <div class="image-album"  data-aos="flip-left" data-aos-duration="1000">
+                <img src="img/g3.jpg" alt="g" id="albumimage">
+            </div>
+            <div class="image-album"  data-aos="flip-left" data-aos-duration="1000">
+                <img src="img/g4.jpg" alt="g" id="albumimage">
+            </div>
+        </div>
+    </section>
+    <!-----------Albums link -------->
+
+    <!-----------Social Media link -------->
+    <section class="album" id="album">
+        <div class="heading">
+            <h1>melodyhub social media</h1>
+        </div>
+        <div class="container">
+            <a href="#" class="social-i" id="f" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="img/i1.png" alt="">
+            </a>
+            <a href="#" class="social-i" id="i" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="img/i2.png" alt="">
+            </a>
+            <a href="#" class="social-i" id="t" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="img/i3.png" alt="">
+            </a>
+            <a href="#" class="social-i" id="y" data-aos="zoom-in" data-aos-duration="1000">
+                <img src="img/i4.png" alt="">
+            </a>
+        </div>
+        </div>
+    </section>
+    <!-----------Social Media link -------->
+
+    <!---------- Our    Footer --------->
+    <section class="footer" id="footer">
+        <div class="container">
+
+            <div class="logo">
+                <img src="img/footer-log.png" alt="">
+                <div class="card">
+                    <img src="img/c1.png" alt="">
+                    <img src="img/c2.png" alt="">
+                    <img src="img/c3.png" alt="">
+                </div>
+            </div>
+
+            <div class="link">
+                <h1>useful link</h1>
+                <nav>
+                    <a href="#header">Home</a>
+                    <a href="#artist">Artists</a>
+                    <a href="#album">Albhums</a>
+                    <a href="#Music-list">songs</a>
+                    <a href="#album">social Media</a>
+                </nav>
+            </div>
+
+            <div class="link">
+                <h1>quick link</h1>
+                <nav>
+                    <a href="">privacy policy</a>
+                    <a href="">photo policy</a>
+                    <a href="">term condition</a>
+                    <a href="">faqs</a>
+                </nav>
+            </div>
+
+            <div class="link">
+                <h1>news letter</h1>
+                <form class="search-bar" id="emailForm" action="https://api.web3forms.com/submit" method="post">
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="31314080-717d-4803-91ed-5ef2d8a3471a">
+                    <input type="email" placeholder="email" id="email" name="email" required>
+                    <button type="submit" class="submit-btn"><i class="fi fi-br-search"></i></button>
+                </form>
+                <div class="icon-last">
+                    <i class="fi fi-brands-facebook"></i>
+                    <i class="fi fi-brands-instagram"></i>
+                    <i class="fi fi-brands-twitter"></i>
+                    <i class="fi fi-brands-linkedin"></i>
+                </div>
+            </div>
+
+            <div class="link">
+                <h1>request service</h1>
+                <nav>
+                    <h5>location</h5>
+                    <p>3281 North Decatur Blvd #270 <br>Las
+                        Vegas, Nevada 89130</p>
+
+                    <h5>phone</h5>
+                    <p>+ 1 224 425 9843</p>
+
+                    <h5>email</h5>
+                    <p>www melodyhub.com</p>
+                </nav>
+            </div>
+
+        </div>
+        <div class="last">
+            <div class="link">
+                <a href="#">privacy policy</a>
+                <a href="#">faqs</a>
+            </div>
+            <div class="link">
+                <p>Copyight By melodyhub all right reserved 2024!.</p>
+            </div>
+            <div class="link">
+                <a href="#">term condition</a>
+                <a href="#">cookies policy</a>
+            </div>
+        </div>
+    </section>
+    <!---------- Our    Footer --------->
+</body>
+<!---------- swiper js ----------->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!---------- swiper js ----------->
+<!---------- javascript ---------->
+<script src="style.js"></script>
+<!---------- javascript ---------->
+<!-----------jquery link --------->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<!-----------jquery link --------->
+<!-----------Aos    link --------->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://unpkg.com/wavesurfer.js@7"></script>
+<!-----------Aos    link---------->
+<script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/regions.min.js"></script>
+<!-- Required for hCaptcha -->
+<script src="https://web3forms.com/client/script.js" async defer></script>
+
+</html>
